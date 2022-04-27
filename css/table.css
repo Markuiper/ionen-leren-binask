@@ -1,0 +1,38 @@
+
+.table {
+    background-color: #e9e9ed;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    width: 800px; }
+  
+  .table th {
+    background: #ccc; }
+  
+  .table th, td {
+    border: 1px solid #ccc;
+    padding: 5px; }
+  
+  .table tr:nth-child(even) {
+    background: #efefef; }
+  
+  .table tr:hover {
+    background: #d1d1d1; }
+  
+  a {
+    text-decoration: none;
+    color: #00953E; }
+  
+  .table .singaal {
+    color: red;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    font-style: inherit; }
+  
+  .table .stofnaam {
+    text-align: center;
+    color: green;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    text-transform: capitalize; }

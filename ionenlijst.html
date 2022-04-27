@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/table.css">
+    <title>Ionen lijst</title>
+</head>
+<body>
+    <h1>Lijst met Ionen</h1>
+    <table class="table">
+
+        <thead>
+          <th>naam</th>
+          <th>formule</th>
+        </thead>
+        <tbody id="namenlijst">
+          
+           
+        </tbody>
+     
+      </table>
+
+      <script>
+const naamlijst = document.querySelector('#namenlijst')
+const trivialenaam = document.querySelector('.trivialenaam')
+const formule = document.querySelector('.formule')
+
+const naamJson ="./ionenlijst.json"
+
+const lijst = async () => {
+
+    const gegevens = await fetch(naamJson);
+  
+    const data = await gegevens.json();
+
+    console.log(data);
+
+    let output = "";
+
+ 
+  
+    data.forEach(item => {
+    output +=
+    `<tr><td class="naam">${item['naam']}</td><td class="formule">${item['formule']}</td></tr>`
+     } )
+    naamlijst.innerHTML = output
+
+}
+
+lijst()
+      </script>
+</body>
+</html>
