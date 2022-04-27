@@ -51,7 +51,7 @@ const woord = async () => {
   const gegevens = await fetch(naamJson);
   const data = await gegevens.json();
   let newwoord = data[Math.floor(Math.random()*data.length)]
-  ion.innerHTML = `<div class="woordNaam" ><p class="formule">${newwoord['formule']}</p></div>`
+  ion.innerHTML = `<div class="woordNaam" >${newwoord['formule']}</div>`
   localStorage.setItem("naam", newwoord['naam'])
 }
 
