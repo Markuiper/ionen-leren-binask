@@ -27,7 +27,7 @@ ionenrij.forEach(el =>{
 
 
 const counter = async() =>{
-    const  count = await fetch("../../api/hitCounter.php", {
+    const  count = await fetch("../api/hitCounter.php", {
      method: "GET"
    });
  
