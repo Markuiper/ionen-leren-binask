@@ -69,14 +69,8 @@ const test = (X)=>{
   let Y = X.innerHTML
   console.log(Y);
   lichtbox.style.display = 'flex';
-      
-  if(Y === localStorage.getItem("naam")){
-    newScore++
-    score.innerHTML = 'Goed punt erbij'
-  }else{
-      score.innerHTML = 'Foutje puntje eraf'
-      newScore--
-  }
+  
+  Y === localStorage.getItem("naam") ? (score.innerHTML = 'Goed punt erbij', newScore++):( score.innerHTML = 'Foutje puntje eraf', newScore--)
 start.innerHTML = 'Volgende'
 punt.innerHTML = `${newScore} punten`
 }
